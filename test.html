@@ -1,66 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>テキストの二重縁取り</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- explain -->
-    <p style="border:black solid 3px; display: inline-block; padding: 20px;">
-        一つ目は、疑似要素のbeforeを使って、<br>
-        二重縁取りを実装しています。<br>
-        二つ目は、3つのテキストを重ねて二重縁取りを作っています。<br>
-
-    </p>
+    <!--1.疑似要素を使った二重縁取り-->
+<h2>1.疑似要素を使った二重縁取り</h2>
+<div class="double-outline" data-text="aaaDouble-Outline">aaaDouble-Outline</div>
 
 
-    <div class="double-outline" data-text="aaaDouble Outline">aaaDouble Outline</div>
-
-
-
-    <div id="container">
-        <p>二重縁取りカスタマイズ可能ver.</p>
-        <p>二重縁取りカスタマイズ可能ver.</p>
-        <p>二重縁取りカスタマイズ可能ver.</p>
+<!--2.テキストを重ねて、作った二重縁取り-->
+<h2>2.テキストを重ねて、作った二重縁取り</h2>
+    <div style="margin-bottom: 20px;">
+        <span>一つ目の縁の色</span><input type="color" value="#FFFFFF" name="" id="changeOutlineFir">
+        <span>二つ目の縁の色</span><input type="color" value="#000000" name="" id="changeOutlineSec">
     </div>
-
-    <div>
-        <span>一つ目の縁の色:</span><input type="color" name="color-1" value="#ffffff" class="inputColor">
-        <span>ニつ目の縁の色:</span><input type="color" name="color-2" value="#000000" class="inputColor">
+    <div class="double-outline-main">カスタマイズ二重縁取り
+    <div class="double-outline2">
+      カスタマイズ二重縁取り
+    </div>
+    <div class="double-outline2">
+      カスタマイズ二重縁取り
+    </div>
     </div>
 
 
-
-
-    <script>
-        // 二つ目の縁取りの、色変更
-        const text = document.querySelectorAll("#container p")
-        const inputColor = document.getElementsByClassName("inputColor")
-
-        inputColor[0].addEventListener("input", function () {
-            const color = this.value;
-            text[1].style.webkitTextStrokeColor = color;
-        })
-
-        inputColor[1].addEventListener("input", function () {
-            const color = this.value;
-            text[2].style.webkitTextStrokeColor = color;
-        })
-    </script>
-
-
-
-
-
-    <style>
-
-
-    </style>
-
+    <!--3.text-shorrowを使った、二重縁取り-->
+<h2>3.text-shorrowを使った、二重縁取り</h2>
+<p class="shorrow-double-outline">
+  text-shorrow
+</p>
 </body>
-
 </html>
