@@ -1,8 +1,9 @@
-    /* 一つ目の縁取りのスタイル */
+    /* 一つ目の縁取りのスタイル-START */
     .double-outline {
         position: relative;
-        font-size: 84px;
-        font-weight: bold;
+        color: white;
+        font-size: 35px;
+        font-family: keifont;
     }
     
     .double-outline::before,
@@ -17,60 +18,63 @@
     
     .double-outline::before {
         z-index: -1;
-        -webkit-text-stroke-width: 8px;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
+        -webkit-text-stroke-width: 6px;
+    -webkit-text-stroke-color: red
     }
     
     .double-outline::after {
         z-index: -2;
-        -webkit-text-stroke-width: 15px;
-    -webkit-text-stroke-color: rgb(0, 217, 255);
+        -webkit-text-stroke-width: 10px;
+    -webkit-text-stroke-color: black;
     }
+    /* 一つ目の縁取りのスタイル-END */
 
 
-
-    @font-face {
+/* 二つ目の縁取りのスタイル-START */
+        .double-outline-main {
+        position: relative; 
         font-family: keifont;
-        src: url(./font/keifont.ttf);
+        font-size: 35px;
+    }
+
+        .double-outline2 {
+        position: absolute; 
+        top: 0;
+        left: 0;
     }
 
 
-    
-        /* 二つ目の縁取りのスタイル */
-
-        #container > p {
-            margin-top: 100px; margin-left: 10px;
-            font-size: 35px; font-family: keifont;
-            letter-spacing: 2px;
-        }
-
-
-      
-    
-    
-        #container > :nth-of-type(1) {
-            position: absolute;
-            left: 0px;
-      color: rgb(255, 0, 0);
+    .double-outline2:nth-of-type(1) {
+        z-index: -1;
+        -webkit-text-stroke-color: white;
+        -webkit-text-stroke-width: 5px;
     }
-    
-        #container > :nth-of-type(2) {
-            position: absolute;
-            left: 0px;
-            z-index: -1;
-      color: red;
-      -webkit-text-stroke-width: 6px;
-    -webkit-text-stroke-color: rgb(240, 237, 237);
-    
+    .double-outline2:nth-of-type(2) {
+        z-index: -2;
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 10px;
     }
-    
-    #container > :nth-of-type(3) {
-        position: absolute;
-            left: 0px;
-            z-index: -2;
-            color: red;
-            -webkit-text-stroke-width: 12px;
-    -webkit-text-stroke-color: rgb(0, 0, 0);
-    
-     
-    }    
+/* 二つ目の縁取りのスタイル-END */
+
+
+
+/* 三つ目の縁取りのスタイル-START */
+    .shorrow-double-outline {
+        font-family: keifont;
+        font-size: 35px;
+        margin: 0;
+        color: blue;
+        /* Text color */
+        text-shadow:
+            /* Inner shadow for thicker border effect */
+            2px 2px 0 white,
+            -2px -2px 0 white,
+            2px -2px 0 white,
+            -2px 2px 0 white,
+            /* Outer shadow for additional border effect */
+            4px 4px 0 blue,
+            -4px -4px 0 blue,
+            4px -4px 0 blue,
+            -4px 4px 0 blue;
+    }
+/* 三つ目の縁取りのスタイル-END */
